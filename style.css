@@ -1,0 +1,77 @@
+:root {
+	--foreground: #f5ff6e;
+	--foreground-hover: #f8ff99;
+	--background: #103b82;
+	--background-lgt: #2561c4;
+}
+
+html * {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	position: relative;
+	overflow: hidden;
+}
+
+button#restart {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 3;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	background-color: var(--foreground);
+	color: #000;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+#input-container {
+	position: absolute;
+	left: 50%;
+	top: 1rem;
+	transform: translate3d(-50%, 0, 0);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+#input-container input {
+	background-color: rgb(255 255 255 / 0.25);
+	border: 3px solid var(--background-lgt);
+	border-radius: 0.25rem;
+	color: #fff;
+	font-size: 1.25rem;
+}
+
+#select-word {
+	/* 	font-size: 1.25rem; */
+	background-color: var(--foreground);
+	border: none;
+	border-radius: 0.25rem;
+	padding: 0.5rem 1.5rem;
+}
+
+button#restart:hover,
+#select-word:hover {
+	background-color: var(--foreground-hover);
+}
+
+canvas#oof-canvas {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	/* 	outline: 1px solid lime; */
+	z-index: 2;
+	pointer-events: none;
+}
